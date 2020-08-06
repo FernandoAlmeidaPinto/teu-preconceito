@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../components/Button.dart';
+
 import 'package:teupreconceito/pages/Homophobia/Homophobia.dart';
 import 'package:teupreconceito/pages/Machism/Machim.dart';
 import 'package:teupreconceito/pages/sexism/Sexism.dart';
@@ -27,17 +29,14 @@ class HomePage extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Container(
-                height: sizeheight * 0.15,
-                width: sizewidth,
-                child: Text(
-                  'Teu\nPreConceito',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: sizewidth * 0.07,
-                  ),
-                ),
-              ),
+                  height: sizeheight * 0.15,
+                  width: sizewidth,
+                  child: Text('Teu\nPreConceito',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: sizewidth * 0.07,
+                      ))),
               Image(
                 image: AssetImage('assets/splash/barra.png'),
                 width: sizewidth * 0.8,
@@ -52,43 +51,25 @@ class HomePage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
-                        SizedBox(
-                          child: RaisedButton(
-                            onPressed: () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (context) => RacismPage(),
-                                ),
-                              );
-                            },
-                            color: Colors.red,
-                            child: Text(
-                              'Racismo',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: sizewidth * 0.05,
-                                  fontWeight: FontWeight.w300),
-                            ),
-                          ),
+                        Buttom(
+                          'Racismo',
+                          () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => RacismPage(),
+                            ));
+                          },
+                          Colors.red,
                         ),
-                        RaisedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
+                        Buttom(
+                          'Homofobia',
+                          () {
+                            Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) => Homophobia(),
                               ),
                             );
                           },
-                          color: Colors.purple,
-                          child: Text(
-                            'Homofobia',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: sizewidth * 0.05,
-                              fontWeight: FontWeight.w300,
-                            ),
-                          ),
+                          Colors.purple
                         ),
                       ],
                     ),
@@ -98,39 +79,24 @@ class HomePage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
-                        RaisedButton(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
+                        Buttom(
+                          'Machismo',
+                          () {
+                            Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) => MachismPage(),
                               ),
                             );
                           },
-                          color: Colors.orange,
-                          child: Text(
-                            'Machismo',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: sizewidth * 0.05,
-                                fontWeight: FontWeight.w300),
-                          ),
+                          Colors.yellow
                         ),
-                        RaisedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => SexismPage()));
+                        Buttom(
+                          'Sexismo',
+                          () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => SexismPage()));
                           },
-                          color: Colors.blue,
-                          child: Text(
-                            'Sexismo',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: sizewidth * 0.05,
-                                fontWeight: FontWeight.w300),
-                          ),
+                          Colors.blue
                         ),
                       ],
                     ),
@@ -140,37 +106,27 @@ class HomePage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
-                        RaisedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => XenophobiaPage()));
+                        Buttom(
+                          'Xenofobia',
+                          () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => XenophobiaPage(),
+                              ),
+                            );
                           },
-                          color: Colors.yellow,
-                          child: Text(
-                            'Xenofobia',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: sizewidth * 0.05,
-                                fontWeight: FontWeight.w300),
-                          ),
+                          Colors.orange
                         ),
-                        RaisedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => TransPage()));
+                        Buttom(
+                          'Transfobia',
+                          () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => TransPage(),
+                              ),
+                            );
                           },
-                          color: Colors.green,
-                          child: Text(
-                            'Transfobia',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: sizewidth * 0.05,
-                                fontWeight: FontWeight.w300),
-                          ),
+                          Colors.green
                         ),
                       ],
                     ),
@@ -180,37 +136,27 @@ class HomePage extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: <Widget>[
-                        RaisedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => MisoginiaPage()));
+                        Buttom(
+                          'Misoginia',
+                          () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => MisoginiaPage(),
+                              ),
+                            );
                           },
-                          color: Colors.green,
-                          child: Text(
-                            'Misognia',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: sizewidth * 0.05,
-                                fontWeight: FontWeight.w300),
-                          ),
+                          Colors.cyan
                         ),
-                        RaisedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => AporofobiaPage()));
+                        Buttom(
+                          'Aporofobia',
+                          () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => AporofobiaPage(),
+                              ),
+                            );
                           },
-                          color: Colors.yellow,
-                          child: Text(
-                            'Aporofobia',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontSize: sizewidth * 0.05,
-                                fontWeight: FontWeight.w300),
-                          ),
+                          Colors.amber
                         ),
                       ],
                     ),
