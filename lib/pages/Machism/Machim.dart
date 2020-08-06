@@ -1,3 +1,4 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:teupreconceito/pages/Machism/termMachism.dart';
 
@@ -69,7 +70,10 @@ class MachismPage extends StatelessWidget {
                                   height: 5,
                                 ),
                                 RaisedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    BotToast.showSimpleNotification(
+                                        title: 'Função não ativada', );
+                                  },
                                   child: Container(
                                     width: sizew * 0.7,
                                     height: 40,

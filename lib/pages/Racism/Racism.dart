@@ -1,3 +1,4 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:teupreconceito/pages/Racism/racismTerm.dart';
 
@@ -58,9 +59,8 @@ class RacismPage extends StatelessWidget {
                                         'Termos e Expressões',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                          fontSize: sizew * 0.05,
-                                          fontWeight: FontWeight.w300
-                                        ),
+                                            fontSize: sizew * 0.05,
+                                            fontWeight: FontWeight.w300),
                                       ),
                                     ),
                                   ),
@@ -69,7 +69,10 @@ class RacismPage extends StatelessWidget {
                                   height: 5,
                                 ),
                                 RaisedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    BotToast.showSimpleNotification(
+                                        title: 'Função não ativada', );
+                                  },
                                   child: Container(
                                     width: sizew * 0.7,
                                     height: 40,
@@ -78,9 +81,8 @@ class RacismPage extends StatelessWidget {
                                         'Código Penal',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                          fontSize: sizew * 0.05,
-                                          fontWeight: FontWeight.w300
-                                        ),
+                                            fontSize: sizew * 0.05,
+                                            fontWeight: FontWeight.w300),
                                       ),
                                     ),
                                   ),
@@ -89,7 +91,10 @@ class RacismPage extends StatelessWidget {
                                   height: 5,
                                 ),
                                 RaisedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    BotToast.showSimpleNotification(
+                                        title: 'Função não ativada', );
+                                  },
                                   child: Container(
                                     width: sizew * 0.7,
                                     height: 40,
@@ -98,9 +103,8 @@ class RacismPage extends StatelessWidget {
                                         'Nomes Importantes',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                          fontSize: sizew * 0.05,
-                                          fontWeight: FontWeight.w300
-                                        ),
+                                            fontSize: sizew * 0.05,
+                                            fontWeight: FontWeight.w300),
                                       ),
                                     ),
                                   ),

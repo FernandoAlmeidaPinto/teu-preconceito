@@ -1,6 +1,6 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:teupreconceito/pages/Xenophobia/termXenophobia.dart';
-
 
 class XenophobiaPage extends StatelessWidget {
   @override
@@ -59,9 +59,8 @@ class XenophobiaPage extends StatelessWidget {
                                         'Termos e Expressões',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                          fontSize: sizew * 0.05,
-                                          fontWeight: FontWeight.w300
-                                        ),
+                                            fontSize: sizew * 0.05,
+                                            fontWeight: FontWeight.w300),
                                       ),
                                     ),
                                   ),
@@ -70,7 +69,11 @@ class XenophobiaPage extends StatelessWidget {
                                   height: 5,
                                 ),
                                 RaisedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    BotToast.showSimpleNotification(
+                                      title: 'Função não ativada',
+                                    );
+                                  },
                                   child: Container(
                                     width: sizew * 0.7,
                                     height: 40,
@@ -79,9 +82,8 @@ class XenophobiaPage extends StatelessWidget {
                                         'Nomes Importantes',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
-                                          fontSize: sizew * 0.05,
-                                          fontWeight: FontWeight.w300
-                                        ),
+                                            fontSize: sizew * 0.05,
+                                            fontWeight: FontWeight.w300),
                                       ),
                                     ),
                                   ),
@@ -100,7 +102,8 @@ class XenophobiaPage extends StatelessWidget {
                       backgroundColor: Colors.black,
                       child: CircleAvatar(
                         radius: sizeh * 0.111 - 1,
-                        backgroundImage: AssetImage('assets/xenophobia/xenophobia.png'),
+                        backgroundImage:
+                            AssetImage('assets/xenophobia/xenophobia.png'),
                       ),
                     ),
                   ),

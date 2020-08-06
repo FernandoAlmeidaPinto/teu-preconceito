@@ -13,11 +13,11 @@ class _HomophobiaTerm extends State<HomophobiaTerm> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Termos Homofóbicos'),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.red,
         elevation: 0,
       ),
       body: Container(
-        color: Colors.black,
+        color: Colors.white,
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: StreamBuilder(
@@ -48,9 +48,10 @@ class _HomophobiaTerm extends State<HomophobiaTerm> {
                             color: Colors.white,
                             onPressed: () {
                               BotToast.showSimpleNotification(
-                                  title: doc.data['Termo'],
-                                  subTitle: doc.data['significado'],
-                                  duration: Duration(seconds: 15),);
+                                title: doc.data['Termo'],
+                                subTitle: doc.data['significado'],
+                                duration: Duration(seconds: 15),
+                              );
                             },
                             child: Text(
                               doc.data['Termo'],

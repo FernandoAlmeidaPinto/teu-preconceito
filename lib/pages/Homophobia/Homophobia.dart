@@ -1,3 +1,4 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:teupreconceito/pages/Homophobia/termHomophobia.dart';
 
@@ -105,7 +106,10 @@ class Homophobia extends StatelessWidget {
                   Positioned(
                     top: 50,
                     child: RaisedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                                    BotToast.showSimpleNotification(
+                                        title: 'Função não ativada', );
+                                  },
                       child: Container(
                         width: sizew * 0.7,
                         height: 40,

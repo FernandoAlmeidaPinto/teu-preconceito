@@ -17,7 +17,7 @@ class _RacismTermState extends State<RacismTerm> {
         elevation: 0,
       ),
       body: Container(
-        color: Colors.black,
+        color: Colors.white,
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
         child: StreamBuilder(

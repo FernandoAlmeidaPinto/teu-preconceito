@@ -43,42 +43,7 @@ class AporofobiaPage extends StatelessWidget {
                             Center(
                               child: Column(
                                 children: <Widget>[
-                                  RaisedButton(
-                                    onPressed: () {},
-                                    color: Colors.white,
-                                    child: Container(
-                                      width: sizew * 0.7,
-                                      height: 40,
-                                      child: Center(
-                                        child: Text(
-                                          'Alguma coisa',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              fontSize: sizew * 0.05,
-                                              fontWeight: FontWeight.w300),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  SizedBox(
-                                    height: 5,
-                                  ),
-                                  RaisedButton(
-                                    onPressed: () {},
-                                    child: Container(
-                                      width: sizew * 0.7,
-                                      height: 40,
-                                      child: Center(
-                                        child: Text(
-                                          'Outro Botão',
-                                          textAlign: TextAlign.center,
-                                          style: TextStyle(
-                                              fontSize: sizew * 0.05,
-                                              fontWeight: FontWeight.w300),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
+                                  
                                 ],
                               ),
                             )
